@@ -10,15 +10,7 @@ if(isset($_POST['signup']))
    
     include 'B-connection.php';
 
-    $emailQuery="SELECT email FROM users WHERE email==$email";
-    $VerifyEmail=$connection->query($emailQuery);
     
-    if ($VerifyEmail)
-    {
-        echo "The email aready exist";
-    }
-    else
-    {
         $customerdata ="INSERT INTO 
              users (id,  firstname,   lastname,   email,  passwords)
     VALUES         (NULL,'$firstname','$lastname','$email','$password')";
@@ -38,7 +30,7 @@ if(isset($_POST['signup']))
         echo "<h5>Error: " . $query . "</h5>" . $connection->error;
     }
 
-    }
+    
 
     
   
