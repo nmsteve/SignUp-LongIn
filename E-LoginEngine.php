@@ -21,7 +21,7 @@ if(isset($_POST['login']))
             
                 
             if($logInEmail==$email && $logInPassword==$password )
-            {echo "<br>your now loged in";}
+            {echo "<br>your  are now loged in";}
             else{ echo "<br>chech your login details"; }
             
     }
